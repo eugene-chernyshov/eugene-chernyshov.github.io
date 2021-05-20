@@ -1,0 +1,1123 @@
+// ============================
+// IMPORTS
+// ============================
+
+@import "option"
+@import "default"
+@import "slick"
+
+.slick-slide:focus
+	outline-style: none
+	
+// ============================
+// MAIN STYLES
+// ============================
+
+.container
+	width: 100%
+	max-width: nth($mediaBp, 1)
+	margin: 
+		left: auto
+		right: auto
+	padding: 
+		left: 10px
+		right: 10px
+
+.line
+	height: 2px
+	width: 65px
+	background-color: #FFF
+	&-opt2
+		background-color: $mainC1
+		margin: 25px 0
+	&-opt3
+		margin: 30px 0 	
+
+.button
+	display: block 
+	color: #FFF
+	font-weight: 600
+	font-size: 15px
+	text-align: center
+	line-height: 2.5 
+	&-header
+		width: 135px  
+		height: 41px
+		border: 2px solid #fff
+		&:hover
+			background-color: #FFF
+			color: $mainC1
+	&-features-one
+		line-height: 3 
+		width: 120px
+		height: 45px
+		border-radius: 3px
+		background-color: $mainC1 
+		&:hover
+			background-color: $mainC1 / .8
+	&-contact
+		line-height: 3 
+		width: 145px
+		margin: auto 
+		height: 45px
+		border-radius: 3px
+		background-color: $mainC1 
+		&:hover
+			background-color: $mainC1 / .8
+		text-transform: capitalize			   
+
+.icon
+	color: $mainC1
+	text-align: center  
+	&-features
+		width: 36px
+		height: 36px  
+		font-size: 13px 
+		line-height: 2.5 
+		border: 2px solid $mainC1
+			radius: 50%
+	&-our-process
+		width: 66px
+		height: 66px
+		margin: 0 auto
+		font-size: 30px
+		line-height: 2.1
+		border: 2px solid $mainC1
+			radius: 50%		
+		  
+.navbar
+	position: absolute
+	background-color: #000
+	width: 100%
+	z-index: 5
+	&__row
+		@include flex($jc: space-between, $ai: center)
+		height: 70px
+		width: 100%  
+
+.logo
+	font-size: 27px
+	text-transform: uppercase
+	color: $mainC1
+	font-family: "Raleway"
+	font-weight: normal
+	b
+		color: #fff
+	&-header
+		font-size: 60px 	
+
+.nav
+	font-size: 12px 
+	&-list
+		@include flex
+		font-weight: 600 
+		li + li
+			margin-left: 45px
+		&__link
+			color: #c9c9c9
+			&:hover
+				text-decoration: underline
+	&-toggle
+		display: none
+		color: #c9c9c9
+
+.header
+	position: relative
+	width: 100% 
+	height: auto
+	background-image: url(../img/u2_state0.jpg)
+	&:before
+		content: ""
+		position: absolute
+		z-index: 2
+		width: inherit
+		height: 100%
+		background-color: rgba(0, 0, 0, .52)
+	&__grid
+		position: relative	
+		z-index: 3
+		padding: 180px 0 135px 
+		display: grid
+		grid-template-columns: 520px 360px
+		grid-template-rows: 395px
+		justify-content: space-between 
+		align-items: end
+	&__title
+		margin: 20px 0 35px
+		color: #FFF
+		font-family: "Raleway"
+		font-weight: normal
+		font-size: 35px 
+	&__text
+		line-height: 1.5 
+		margin: 35px 0 45px
+		color: #c8c3c1	   
+		font-family: "Raleway"
+		font-weight: lighter
+
+.form
+	width: 360px
+	height: 360px
+	background-color: #FFF
+	border-radius: 3px
+	overflow: hidden 
+	&__title
+		width: 100%
+		height: 55px
+		text-align: center
+		line-height: 2.75 
+		background-color: #F5F5F5
+		font-weight: bold
+		font-size: 20px
+		b
+			color: $mainC1  	
+	&-item
+		position: relative
+		margin: 30px 35px 44px
+		&__line
+			width: 0
+			border-bottom: 2px solid $mainC1
+			position: absolute
+			bottom: 0  
+			transition: .3s
+		&__label 
+			top: 50%
+			left: 10px
+			position: absolute
+			font-weight: normal
+			font-size: 12px 
+			transform: translate(0, -50%)
+			transition: .3s
+			color: #bdbdbd
+		&__input
+			display: block 
+			width: 100%
+			height: 30px
+			border: none
+				bottom: 2px solid #d6d6d6
+			padding: 10px
+			&:focus 
+				~ .form-item__line
+					width: 100%
+				~ .form-item__label
+					top: -2px
+					font-size: 8px
+					color: $mainC1
+	&__btn 
+		display: block
+		width: 100%
+		height: 55px
+		text-align: center
+		line-height: 4
+		font-size: 14px
+		font-weight: 600 
+		background-color: $mainC1  
+		color: #FFF
+		&:hover
+			background-color: $mainC1 / .8 
+	&-opt2
+		width: 100%
+		height: 160px
+		margin: 70px 0 40px   
+		display: grid
+		grid-template-columns: 1fr 1fr
+		grid-template-rows: 160px
+		grid-gap: 60px 
+		&__wrap
+		&-item 
+			margin: 0
+			&:nth-child(1)
+				margin-top: 10px 
+			&:nth-child(2)
+				margin: 30px 0 
+		&__message
+			width: 100% 
+			height: 160px
+			position: relative
+			&__input
+				resize: none
+				position: relative
+				width: 100%
+				height: 160px
+				padding: 20px 10px 0
+				border: none
+					bottom: 2px solid #d6d6d6
+				&:focus 
+					~ .form-opt2-item__line
+						width: 100%
+					~ .form-opt2__message__label
+						top: 10px
+						font-size: 8px
+						color: $mainC1	
+			&__label
+				top: 22px
+				left: 10px
+				position: absolute
+				font-weight: normal
+				font-size: 12px 
+				transform: translate(0, -50%)
+				transition: .3s
+				color: #bdbdbd  
+
+.brand-bar
+	height: 105px
+	border-bottom: 1px solid #b7b7b7 
+	&__grid
+		display: grid
+		grid-template-columns: 365px 640px
+		grid-template-rows: 65px 	
+		justify-content: space-between
+		padding: 20px 0
+	&__title
+		font-weight: bold
+		font-size: 16px
+		color: $mainC2
+	&__text
+		font-weight: normal
+		font-size: 13px
+		margin-top: 5px
+		color: #86878b
+	&-social
+		&-links
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			align-items: center  
+			color: #CCC
+			font-size: 45px
+			cursor: pointer
+			li:hover
+				color: #CCC * .5
+			&-opt2
+				font-size: 22px 		
+		&-opt2
+			margin: 0 auto 10px
+			padding-top: 15px  
+			width: 320px			
+			
+.features
+	width: 100%
+	&-one
+		height: 595px 
+		background-color: $mainC3
+		&-grid
+			display: grid
+			grid-template-columns: 110px 480px 320px
+			grid-template-rows: 335px
+			justify-content: space-between
+			padding: 145px 0 115px
+			&__col
+				&:last-child
+					margin-top: 20px
+		&__tab
+			border: 1px solid $mainC3
+			width: 100%
+			height: 110px
+			background-color: $mainC2
+			color: #FFF
+			font-weight: bold
+			font-size: 15px
+			text-align: center
+			text-transform: uppercase
+			line-height: 7.3
+			cursor: pointer  
+			&:first-child
+				border-radius: 4px 4px 0 0
+			&:last-child
+				border-radius: 0 0 4px 4px
+			&:hover
+				background-color: $mainC1 / .8	
+			&-active
+				background-color: $mainC1
+		&__title
+			margin: 5px 0 45px
+			font-size: 20px
+			color: $mainC2
+			font-weight: bold
+		&__text
+			font-weight: normal
+			font-size: 14px
+			color: #8e8f93
+			p + p
+				margin: 25px 0 50px
+	&-two
+		height: 595px 
+		&-grid
+			display: grid
+			grid-template-columns: 505px 475px
+			grid-template-rows: 355px
+			justify-content: space-between
+			margin-left: -50px
+			padding: 105px 0 135px
+		&__title
+			font-size: 20px
+			color: $mainC2
+			font-weight: bold
+		&__text
+			font-weight: normal
+			font-size: 14px
+			color: #8e8f93
+		&-icons
+			display: grid
+			grid-template-columns: 40px 1fr
+			padding-top: 45px 
+			&:last-child
+			&__wrap
+				margin-left: 25px   	
+				&__title
+					font-size: 15px
+					color: $mainC2
+					font-weight: bold 
+				&__text
+					font-weight: normal
+					font-size: 14px
+					color: #8e8f93
+	&-three
+		height: 520px
+		background-color: $mainC3
+		&-grid
+			display: grid
+			grid-template-columns: 475px 505px
+			grid-template-rows: 350px
+			justify-content: space-between
+			padding: 75px 0 95px
+		&__title
+			margin-top: 40px 
+			font-size: 20px
+			color: $mainC2
+			font-weight: bold
+		&__text
+			font-weight: normal
+			font-size: 14px
+			color: #8e8f93
+			p + p
+				margin-top: 25px
+				
+.our-process
+	height: 590px
+	&__wrap
+		@include flex($jc: center, $fw: wrap)
+		padding: 105px 0 80px
+		margin: 0 auto
+		width: 100%
+	&__title
+		font-family: "Raleway"
+		font-weight: normal			
+		width: 100%
+		font-size: 30px
+		text-align: center
+		color: $mainC2	
+	&__text
+		width: 100%
+		text-align: center
+		font-weight: normal
+		font-size: 12px
+		color: #8e8f93
+	&-grid
+		&__col
+			padding: 0 25px 
+			&__title
+				width: 100%
+				font-size: 18px
+				text-align: center
+				color: $mainC2
+				font-weight: bold
+				margin: 20px 0  	
+			&__text	
+				width: 100%
+				text-align: center
+				font-weight: normal
+				font-size: 12px
+				color: #8e8f93
+	
+.pricing
+	height: 885px
+	background-color: $mainC3
+	&__wrap
+		@include flex($jc: center, $fw: wrap)
+		padding: 105px 0 80px
+		margin: 0 auto
+		width: 100%
+		&__title
+			font-family: "Raleway"
+			font-weight: normal			
+			width: 100%
+			font-size: 30px
+			text-align: center
+			color: $mainC2	
+		&__text
+			width: 100%
+			text-align: center
+			font-weight: normal
+			font-size: 12px
+			color: #8e8f93
+	&-grid
+		&__col
+			padding: 40px 20px 0
+			&-two
+				padding: 0 20px
+			&__item
+				width: 100%
+				height: 40px
+				background-color: #FFF
+				text-align: center
+				text-transform: uppercase
+				border-top: 1px solid #f5f5f5
+				color: #86878b
+				font-size: 12px
+				line-height: 3.5
+				font-weight: normal
+				&:nth-child(-n+2)
+					background-color: $mainC2
+					color: #FFF 
+					font-weight: bold
+					text-transform: none
+				&:nth-child(1)
+					height: 60px
+					font-size: 18px
+					line-height: 3.5
+				&:nth-child(2)
+					height: 150px
+					border:
+						top: 1px solid #fff
+						bottom: 5px solid $mainC1
+					font-size: 75px
+					line-height: 1.5
+					font-family: "Raleway"
+					font-weight: bold
+					i
+						display: block
+						font-size: 12px 
+						color: #86878b
+						line-height: 1
+						font-weight: 600
+				&__sumbol
+					font-size: 32px
+				&-two
+					&:nth-child(-n+3)
+						background-color: $mainC2
+						color: #FFF 
+						font-weight: bold
+						text-transform: none
+					&:nth-child(2)
+						border-bottom: none
+					&:nth-child(3)
+						background-color: $mainC1
+						text-transform: uppercase
+						border: none  		
+					 		
+.testimonals
+	height: 590px
+	margin-bottom: 50px 
+	&__wrap
+		@include flex($jc: center, $fw: wrap)
+		margin: 0 auto
+		padding: 105px 0 60px
+		width: 100%
+		&__title
+			font-family: "Raleway"
+			font-weight: normal			
+			font-size: 30px
+			width: 100% 
+			text-align: center
+			color: $mainC2	
+			text-transform: uppercase
+		&__text
+			width: 100%
+			text-align: center
+			font-weight: normal
+			font-size: 12px
+			color: #8e8f93
+	&-grid
+		&__col
+			width: auto
+			margin: 0 auto
+			&__item
+				padding: 0 45px 
+			&__text
+				margin: 0 auto 
+				position: relative 
+				height: 130px
+				background-color: $mainC3
+				border-radius: 3px
+				font-weight: normal
+				font-style: italic
+				color: #86878b
+				font-size: 14px
+				padding: 16px 10px
+				&:before
+					content: ""
+					position: absolute
+					background-color: inherit
+					z-index: -1  
+					width: 20px       	
+					height: 15px
+					bottom: -5px
+					left: 25px  
+					transform: rotate(45deg)
+			&__user
+				height: 70px
+				margin: 25px auto 0
+				@include flex
+				&__info
+					margin: 10px 0 0 15px
+					height: content
+					&__name
+						font-size: 20px
+						font-weight: bold
+						text-transform: capitalize
+						margin-bottom: 5px   
+					&__positions
+						font-size: 14px 
+						font-weight: normal
+						color: #86878B
+						text-transform: capitalize
+
+.custom
+	background-image: url(../img/u25_state0.jpg) 
+	background-size: cover
+	background-position: center 
+	height: 320px
+	width: 100% 
+	position: relative
+	&:before
+		content: ""
+		position: absolute
+		z-index: 1
+		width: inherit
+		height: inherit  
+		background-color: rgba(0, 0, 0, .52)
+	&__wrap
+		position: relative 
+		z-index: 2
+		@include flex($jc: center, $fw: wrap)
+		&__title
+			font-family: "Raleway"
+			font-weight: normal			
+			font-size: 30px
+			width: 100% 
+			text-align: center
+			color: #fff
+			text-transform: uppercase
+			margin-top: 70px 
+		&__text
+			width: 100%
+			text-align: center
+			font-family: "Raleway"
+			font-weight: lighter	
+			font-size: 14px
+			color: #c8c6c3
+			margin-bottom: 30px
+
+.contact
+	width: 100%
+	height: 610px
+	&__wrap
+		@include flex($jc: center, $fw: wrap)
+		margin: 0 auto 0
+		padding-top: 105px 
+		width: 100%
+		&__title
+			font-family: "Raleway"
+			font-weight: normal			
+			font-size: 30px
+			width: 100% 
+			text-align: center
+			color: $mainC2	
+			text-transform: uppercase
+		&__text
+			width: 100%
+			text-align: center
+			font-weight: normal
+			font-size: 12px
+			color: #8e8f93
+
+.footer
+	width: 100%
+	height: 80px
+	background-color: #000
+	&__copyright
+		width: 100%
+		text-align: center 
+		font-size: 10px
+		color: #a3a3a3    	
+					
+.slick-dots
+	@include flex($jc: center)
+	font-size: 17px
+	margin-top: 2em
+	li
+		margin: 0 0.17em
+	button
+		display: block
+		width: 13px
+		height: 13px
+		background: none
+		border: .17em solid $mainC1
+			radius: 50px
+		cursor: pointer
+		color: transparent
+	.slick-active button
+			background-color: $mainC1
+
+// ============================
+// MEDIA
+// ============================
+
+@for $i from 1 to length($mediaBp)
+	@media (max-width: nth($mediaBp, $i))
+		.container
+			max-width: nth($mediaBp, $i + 1)
+
+@media (max-width: nth($mediaBp, 1))
+	.brand-bar
+		&__grid
+			grid-template-columns: 365px 550px
+		&-social
+			height: 100% 
+			&-links
+				height: 100% 
+				font-size: 35px
+				&-opt2
+					font-size: 20px  	
+
+	.features
+		&-one
+			&-grid
+				grid-template-columns: 105px 430px 300px
+		&-two
+			&-grid
+				grid-template-columns: 505px 430px
+				&__col
+					&__img
+						width: 100%
+						height: 100%
+		&-three
+			&-grid
+				grid-template-columns: 430px 490px
+				&__col
+					&__img
+						width: 505px
+						height: 355px
+	
+	.testimonals-grid__col__item
+		padding: 0 30px 					  
+
+@media (max-width: nth($mediaBp, 2))
+	.header
+		&__grid
+			@include flex($fw: wrap)
+			padding: 150px 0 0
+			&__col
+				display: block
+				text-align: center
+				&:nth-child(2)
+					margin: 50px auto
+		&__title
+			font-size: 36px 			
+
+	.line
+		margin: 0 auto
+		&-opt2, &-opt3
+			margin: 25px auto
+		
+	.button
+		&-header
+			margin: 0 auto
+		 
+	.brand-bar
+		height: auto
+		&__grid
+			display: block
+			text-align: center
+			&__col
+				&:nth-child(2)
+					margin-top: 20px 
+	
+	.features
+		&-one
+			height: auto 
+			&-grid
+				grid-template-columns: 110px 480px
+				padding: 80px 30px
+				&__col
+					&:last-child
+						display: none 
+		&-two
+			height: auto
+			&-grid
+				display: block
+				margin: 0
+				padding: 80px 0 
+				&__col
+					&:first-child
+						display: none 
+			&__title, &__text
+				text-align: center
+			&-icons
+				margin-left: 0
+				&__wrap
+					width: 100%
+					 
+		&-three
+			height: auto
+			&-grid
+				display: block
+				padding: 60px 0  
+				&__col
+					&:last-child
+						display: none 
+			&__title, &__text
+				text-align: center
+			&__title
+				margin: 0 
+					
+	.icon
+		&-features
+			margin: auto 0 
+	
+	.our-process
+			&__wrap
+				padding: 80px 0
+			&-grid
+				grid-template-rows: auto						
+	
+	.pricing
+		height: 850px
+		&__wrap
+			padding: 80px 0
+			
+@media (max-width: nth($mediaBp, 3))
+
+	.features-one-grid
+		grid-template-columns: 110px 425px
+		padding: 60px 0
+	.features-two
+		&-grid
+			padding: 60px 0
+		&-icons
+			padding: 0
+			margin: 30px 40px 30px 0
+		
+	.our-process
+		height: auto 
+		&__wrap
+			padding: 60px 0
+		&-grid
+			padding-bottom: 60px
+			&__col
+				&:nth-child(2)
+					h2
+						margin: 32px 0
+			
+	.pricing
+		height: auto
+		&__wrap
+			padding: 60px 0
+		&-grid
+			padding-bottom: 60px
+				
+	.testimonals
+		height: auto
+		margin-bottom: 60px 
+		&__wrap
+			padding: 60px 0
+			
+	.contact
+		height: auto 
+		&__wrap
+			padding-top: 60px
+			
+	.form-opt2
+		@include flex($fw: wrap)
+		height: auto
+		padding: 0 100px
+		&__wrap
+			width: 100% 
+			margin-bottom: 45px
+			
+	.button-contact
+		margin: 0 auto 40px 		
+
+@media (max-width: nth($mediaBp, 4))
+	
+	.logo
+		font-size: 22px
+		&-header
+			font-size: 38px
+
+	.navbar
+		position: fixed
+		
+	.nav
+		@include flex ($jc: space-between)
+		&-list
+			display: none
+			&-active
+				display: flex
+				flex-direction: column
+				align-items: center
+				position: absolute
+				top: 70px
+				left: 0
+				width: 100%
+				height: 100vh
+				font-weight: inherit
+				font-family: inherit  
+				padding-top: 20px 
+				font-size: 20px 
+				background-color: #000
+				li + li
+					margin: 15px 0 0 		
+		&-toggle
+			position: relative
+			display: block
+			height: 25px
+			width: 28px
+			border: 1px solid #fff
+				radius: 3px
+			text-align: center
+			font-size: 14px
+			line-height: 1.7
+			cursor: pointer		
+			&-active
+				line-height: 1.7
+				&__open
+					color: transparent
+		
+	.header
+		&__grid
+			padding: 100px 0 0
+			&__col
+				&:nth-child(2)
+					margin: 35px auto
+		&__title
+			font-size: 24px
+			margin: 20px auto
+		&__text
+			font-size: 14px
+			margin: 20px auto
+	
+	.button
+		width: 100px
+		height: 35px
+		font-size: 12px
+		&-features-one
+			margin: 0 auto
+		
+	.form
+		width: 100%
+		height: 100%
+		&__title
+			height: 40px
+			font-size: 15px
+		&-item
+			margin: 20px 25px 30px
+			&__label
+				font-size: 10px	
+		&__btn
+			height: 40px
+			line-height: 3.5
+			font-size: 12px
+
+	.brand-bar
+		&__title
+			font-size: 15px
+		&__text
+			font-size: 12px
+		&-social
+			padding: 0 25px
+			&-opt2
+				width: 100%
+				padding-top: 10px
+			&-links
+				font-size: 20px
+				&-opt2
+					font-size: 16px 
+				
+	.features
+		&-one
+			&-grid
+				display: block
+				padding: 40px 0
+				&__col
+					&:first-child
+						display: grid
+						grid-template-columns: 1fr 1fr 1fr
+					&:nth-child(2)
+						text-align: center
+						margin-top: 25px 
+			&__tab
+				height: 55px
+				font-size: 14px
+				line-height: 4
+				&:first-child
+					border-radius: 4px 0 0 4px
+				&:last-child
+					border-radius: 0 4px 4px 0
+			&__title
+				font-size: 15px
+			&__text
+				font-size: 12px
+				p + p
+					margin: 20px 0 25px
+		&-two
+			&-grid
+				padding: 30px 0 0
+			&__title
+				font-size: 15px
+			&__text
+				font-size: 12px	
+			&-icons
+				&__wrap
+					&__title
+						font-size: 13px
+					&__text	
+						font-size: 10px
+		&-three
+			&-grid
+				padding: 30px 0
+			&__title
+				font-size: 15px
+			&__text
+				font-size: 12px			
+	
+	.our-process
+		&__wrap
+			padding: 30px 0
+		&__title
+			font-size: 20px 	
+		&-grid
+			padding-bottom: 30px
+			&__col
+				&:nth-child(2) h2
+					margin: 12px 0
+				&__title
+					font-size: 16px
+					margin: 12px 0
+				&__text
+					font-size: 10px		
+
+	.line
+		&-opt2, &-opt3
+			margin: 15px auto
+		
+	.slick-dots button
+		width: 10px
+		height: 10px
+	
+	.pricing
+		&__wrap
+			padding: 30px 0
+			&__title
+				font-size: 20px
+		&-grid
+			padding-bottom: 30px
+			&__col 
+				padding: 40px 3% 0
+				&-two
+					padding: 0 3%
+				&__item
+					width: 100%
+					height: 30px
+					font-size: 10px
+					line-height: 3
+					&:nth-child(1)
+						height: 40px
+						font-size: 15px
+						line-height: 2.6
+					&:nth-child(2)
+						height: 110px
+						font-size: 55px
+						line-height: 1.4
+						i
+							font-size: 10px 
+							line-height: 1
+					&__sumbol
+						font-size: 25px
+	
+	.testimonals
+		margin-bottom: 30px
+		&__wrap
+			padding: 30px 0
+			&__title
+				font-size: 20px
+		&-grid
+			&__col
+				&__item
+					padding: 0 25%
+				&__text
+					height: 100%
+					font-size: 10px
+				&__user
+					height: 100%
+					&__avatar
+						overflow: hidden
+						margin-left: 15px
+						img
+							width: 45px
+							height: 45px
+					&__info
+						margin: 0 0 0 15px 
+						&__name
+							font-size: 15px
+						&__positions
+							font-size: 10px
+		
+	.custom
+		height: 100%
+		&__wrap
+			margin-bottom: 30px 
+			&__title
+				margin-top: 30px
+				font-size: 20px
+			&__text
+				font-size: 10px
+	
+	.contact
+		&__wrap
+			padding-top: 30px
+			&__title
+				font-size: 20px
+	
+	.form-opt2
+		padding: 20px
+		margin: 0
+		margin-top: 10px 
+		&-item:nth-child(2)
+			margin: 20px 25px 30px
+		&__wrap
+			margin-bottom: 10px
+		&__message
+			padding: 0 25px 
+			&__label
+				left: 35px
+
+	.footer
+		height: 100%
+		&__copyright
+			padding-bottom: 10px
+
+@media (max-width: nth($mediaBp, 5))
+
+	.pricing
+		&-grid
+			&__col 
+				padding: 40px 3% 0
+				&-two
+					padding: 0 3%
+
+	.testimonals-grid__col__item
+		padding: 0px 25%
+
+@media (max-width: nth($mediaBp, 6))	
+
+	.pricing
+		&-grid
+			&__col 
+				padding: 40px 1% 0
+				&-two
+					padding: 0 1%
+
+	.testimonals-grid__col__item
+		padding: 0px 15%	
